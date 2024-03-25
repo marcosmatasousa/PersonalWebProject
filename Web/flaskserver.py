@@ -8,6 +8,10 @@ app = Flask(__name__)
 def return_index():
     return send_file('index.html', mimetype='html')
 
+@app.route('/css/<path:filename>')
+def serve_css(filename):
+    return send_from_directory('css', filename)
+
 @app.route('/music')
 def return_music_page():
     return send_file('music.html', mimetype='html')

@@ -12,13 +12,9 @@ p{
     max-width: 600px;
 }
 
-ul{
-    list-style-type: none;
-}
-
-/** About page**/
-#about_page {       
-        text-align: justify;
+footer{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /** Music page configs**/
@@ -40,4 +36,23 @@ ul{
 
 #audioPlayer {
     display: none;
+}
+
+.center_div{
+    display: grid;
+    place-items: center;
+    text-align: justify;
+}
+
+.center_h2{
+    text-align: center;
+}
+
+#image_margin img{
+    margin-right: 20px;
+}
+
+ul li{
+    list-style-type: none;
+    margin-left: 0;
 }

@@ -1,0 +1,29 @@
+body{
+    background-color: black;
+    font-family: Karla;
+}
+
+h1{
+    color: white;
+    margin-left: 20px;
+}
+
+a.music{
+    padding-top: 300px;
+    padding-left: 15px;
+    padding-right:15px;
+    padding-bottom: 50px;
+    background: rgb(12, 12, 12);
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+}
+
+a.music:hover{
+    background: rgb(27, 27, 27);
+}
+
+div{
+    margin-left: 50px;
+}

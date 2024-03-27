@@ -12,9 +12,17 @@ def return_index():
 def serve_css(filename):
     return send_from_directory('css', filename)
 
+@app.route('/html/path:filename')
+def serve_html(filename):
+    return send_from_directory('html', filename)
+
 @app.route('/music')
 def return_music_page():
     return send_file('music.html', mimetype='html')
+
+@app.route('/champion')
+def return_champion_page():
+    return send_file('champion.html', mimetype='html')
 
 @app.route('/todo')
 def return_todo_page():

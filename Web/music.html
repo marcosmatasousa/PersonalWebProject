@@ -3,61 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/musicstyle.css">
     <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
-    <link rel="stylesheet" href="css/style.css">
-    <title>BONES - Champion</title>
-    
+    <title>MusicPage</title>
 </head>
-<body id="music_page">
-    
+<body>
     <header>
-        <h1>BONES - Champion</h1>
+        <h1 class="music">MusicPage</h1>
     </header>
-    
-    <img src="static/champion_cover.jpg" alt="BONES - Champion">
-    <br>
-    <br>
-    <br>
-
     <div>
-        <ol id="playlist">
-            <li data-src="static/HomeForTheHolidays.mp3">HomeForTheHolidays</li><br>
-            <li data-src="static/WishICouldHaveHelpedYou.mp3">WishICouldHaveHelpedYou</li><br>
-            <li data-src="static/NumberOneFan.mp3">NumberOneFan</li><br>
-            <li data-src="static/IBelieveYou,ButMyGlock19Don't.mp3">IBelieveYou,ButMyGlock19Don't</li><br>
-            <li data-src="static/Trampoline.mp3">Trampoline</li><br>
-            <li data-src="static/DefendingYourLife.mp3">DefendingYourLife</li><br>
-            <li data-src="static/10ThingsIHateAboutYou.mp3">10ThingsIHateAboutYou</li><br>
-            <li data-src="static/Brighton.mp3">Brighton</li><br>
-        </ol>
+        <br><br><br>
+        <a class="music" href="champion"><img src="static/champion_cover.jpg" alt=""></a>
+        <br><br><br><br>
     </div>
-
-    <audio id="audioPlayer" controls>
-        <source src="" type="audio/mpeg">
-        Seu navegador não suporta a reprodução de áudio.
-    </audio>
-    <br>
-    <br>
-
-    <footer>
-        <a href="https://teamsesh.bigcartel.com/music" target="_blank"><img src="static/crown.png" alt=""></a>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var playlist = document.getElementById('playlist');
-            var audioPlayer = document.getElementById('audioPlayer');
-
-            playlist.addEventListener('click', function(e) {
-                var target = e.target;
-                if (target.tagName === 'LI') {
-                    var musicSrc = target.getAttribute('data-src');
-                    audioPlayer.src = musicSrc;
-                    audioPlayer.play();
-                }
-            });
-        });
-    </script>
-
 </body>
 </html>

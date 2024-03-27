@@ -36,23 +36,33 @@ footer{
 
 #audioPlayer {
     display: none;
+    margin-bottom: 40px;
 }
 
 .center_div{
-    display: grid;
-    place-items: center;
+    Display: flex;
+    align-items: flex-start;
     text-align: justify;
+    flex-direction: column;
+    place-items: center;
 }
 
 .center_h2{
     text-align: center;
 }
 
-#image_margin img{
+.image_margin{
     margin-right: 20px;
+    margin-bottom: 30px;
 }
 
-ul li{
+ul{
     list-style-type: none;
-    margin-left: 0;
+    margin-bottom: 5px;
+    padding: 0px;
+}
+
+li{
+    margin-bottom:5px;
+    padding: 0;
 }

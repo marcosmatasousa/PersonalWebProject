@@ -5,36 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
     <link rel="stylesheet" href="css/musicpage.css">
-   
     <title>BONES - Champion</title>
     
 </head>
 <body>
-    <div>
     <header>
-        <h1>BONES - Champion</h1>
+        <div class="container">
+            <img src="static/champion_cover.jpg" alt="Champion">
+            <div class="type">Album</div>
+            <div class="title">
+                <h1>Champion</h1>
+            </div>
+            <div class="artist" style="margin-left: 40px;">
+                <a href="#">BONES</a>&nbsp; • &nbsp; 2024 &nbsp; • &nbsp; 8 songs 
+            </div>
+        </div>
     </header>
-    
-        <img src="static/champion_page.jpg" alt="BONES - Champion">
-    
-
-    
+    <hr>
+    <div class="music_list">
         <ol id="playlist">
-            <li data-src="static/HomeForTheHolidays.mp3">HomeForTheHolidays</li><br>
-            <li data-src="static/WishICouldHaveHelpedYou.mp3">WishICouldHaveHelpedYou</li><br>
-            <li data-src="static/NumberOneFan.mp3">NumberOneFan</li><br>
-            <li data-src="static/IBelieveYou,ButMyGlock19Don't.mp3">IBelieveYou,ButMyGlock19Don't</li><br>
-            <li data-src="static/Trampoline.mp3">Trampoline</li><br>
-            <li data-src="static/DefendingYourLife.mp3">DefendingYourLife</li><br>
-            <li data-src="static/10ThingsIHateAboutYou.mp3">10ThingsIHateAboutYou</li><br>
-            <li data-src="static/Brighton.mp3">Brighton</li><br>
+            <li data-src="static/HomeForTheHolidays.mp3">HomeForTheHolidays</li>
+            <li data-src="static/WishICouldHaveHelpedYou.mp3">WishICouldHaveHelpedYou</li>
+            <li data-src="static/NumberOneFan.mp3">NumberOneFan</li>
+            <li data-src="static/IBelieveYou,ButMyGlock19Don't.mp3">IBelieveYou,ButMyGlock19Don't</li>
+            <li data-src="static/Trampoline.mp3">Trampoline</li>
+            <li data-src="static/DefendingYourLife.mp3">DefendingYourLife</li>
+            <li data-src="static/10ThingsIHateAboutYou.mp3">10ThingsIHateAboutYou</li>
+            <li data-src="static/Brighton.mp3">Brighton</li>
         </ol>
-
-        <footer>
-            <a href="https://teamsesh.bigcartel.com/music" target="_blank"><img src="static/crown.png" alt=""></a>
-        </footer>
-
     </div>
+    <hr>
+
+    <footer>
+        <div class="container">More of BONES
+            <div>
+                <a target="_blank" href="https://open.spotify.com/intl-pt/artist/5v2WhpA59TJSdPh7LCx1lN?si=icvGz-ZcSuC-y3HakwJiig"><img class="stream" src="static/spotify.png" alt=""></a>
+                <a target="_blank" href="https://soundcloud.com/teamsesh"><img class="stream" src="static/soundcloud.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
 
     <audio id="audioPlayer" controls>
         <source src="" type="audio/mpeg">
@@ -56,6 +65,5 @@
             });
         });
     </script>
-
 </body>
 </html>

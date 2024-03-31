@@ -1,0 +1,54 @@
+body{
+    background-color: black;
+    font-family: Karla;
+}
+
+h1{
+    color: rgb(177, 177, 177);
+    margin-left: 20px;
+}
+
+p{
+    color: rgb(177, 177, 177);
+}
+
+h1:hover{
+    color: white;
+}
+
+a.music{
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right:15px;
+    padding-bottom: 20px;
+    background: rgb(12, 12, 12);
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+a.music:hover{
+    background: rgb(27, 27, 27);
+}
+
+div.row{
+    margin-left: 15px;
+}
+
+div.title{
+    margin-top: 10px;
+    margin-left: 3px;
+}
+
+div.year{
+    margin-top: 10px;
+    color: rgb(160, 157, 157);
+    margin-left: 3px;
+}
+
+p{
+    display: inline-block;
+}

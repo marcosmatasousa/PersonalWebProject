@@ -24,6 +24,14 @@ def return_music_page():
 def return_champion_page():
     return send_file('champion.html', mimetype='html')
 
+@app.route('/thishouseisnotahome')
+def return_thishouse_page():
+    return send_file('thishouseisnotahome.html', mimetype='html')
+
+@app.route('/safeindoors')
+def return_safeindoors_page():
+    return send_file('safeindoors.html', mimetype='html')
+
 @app.route('/todo')
 def return_todo_page():
     return send_file('todo.html', mimetype='html')

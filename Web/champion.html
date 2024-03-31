@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/musicpage.css">
+   
     <title>BONES - Champion</title>
     
 </head>
-<body id="music_page">
-    
+<body>
+    <div>
     <header>
         <h1>BONES - Champion</h1>
     </header>
     
-    <img class="image_margin" src="static/champion_cover.jpg" alt="BONES - Champion">
+        <img src="static/champion_page.jpg" alt="BONES - Champion">
     
 
-    <div>
+    
         <ol id="playlist">
             <li data-src="static/HomeForTheHolidays.mp3">HomeForTheHolidays</li><br>
             <li data-src="static/WishICouldHaveHelpedYou.mp3">WishICouldHaveHelpedYou</li><br>
@@ -28,16 +29,17 @@
             <li data-src="static/10ThingsIHateAboutYou.mp3">10ThingsIHateAboutYou</li><br>
             <li data-src="static/Brighton.mp3">Brighton</li><br>
         </ol>
+
+        <footer>
+            <a href="https://teamsesh.bigcartel.com/music" target="_blank"><img src="static/crown.png" alt=""></a>
+        </footer>
+
     </div>
 
     <audio id="audioPlayer" controls>
         <source src="" type="audio/mpeg">
         Seu navegador não suporta a reprodução de áudio.
     </audio>
-
-    <footer>
-        <a href="https://teamsesh.bigcartel.com/music" target="_blank"><img src="static/crown.png" alt=""></a>
-    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

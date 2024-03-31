@@ -1,0 +1,51 @@
+body{
+    background-color: black;
+    font-family: Karla;
+}
+
+h1{
+    color:rgb(177, 177, 177);
+    
+}
+
+h1:hover{
+    color: white;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    margin-bottom:5px;
+    padding: 0;
+    color: rgb(177, 177, 177);
+    list-style-type:decimal;
+    align-content: left;
+    cursor: pointer;
+}
+
+li:hover{
+    color: white;
+}
+
+img{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+div{
+    Display: flex;
+    align-items: flex-start;
+    text-align: justify;
+    flex-direction: column;
+    place-items: center;
+}
+
+h1{
+    text-align: center;
+}
+
+audio{
+    display: none;
+}

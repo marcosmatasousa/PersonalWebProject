@@ -1,5 +1,5 @@
 body{
-    background-color: black;
+    background-color: rgb(18, 18, 18);
     font-family: Karla;
     font-style: bold;
 }
@@ -43,16 +43,26 @@ img{
     float: left;
 }
 
+img:hover{
+    transform: scale(1.02);
+}
+
 audio{
     display: none;
 }
 
 div.container{
-    margin-left: 80px;
-    margin-top: 50px;
-    color: white;    
+    color: white;
+    background-image: linear-gradient(rgb(83, 83, 83), rgb(18, 18, 18));
+    padding-top: 50px;
+    padding-left: 80px;
 }
 
+div.footer{
+    padding-top: 30px;
+    padding-left: 80px;
+    color: white;
+}
 
 div.type{
     margin-left: 40px;

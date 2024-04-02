@@ -1,19 +1,16 @@
 body{
-    background-color: black;
+    background-image: linear-gradient(rgb(83, 83, 83)1%, rgb(18, 18, 18) 90%);
     font-family: Karla;
 }
 
 h1{
-    color: rgb(177, 177, 177);
-    margin-left: 20px;
+    color: white;
+    margin-left: 50px;
+    margin-top: 30px;
 }
 
 p{
     color: rgb(177, 177, 177);
-}
-
-h1:hover{
-    color: white;
 }
 
 a.music{
@@ -21,21 +18,24 @@ a.music{
     padding-left: 15px;
     padding-right:15px;
     padding-bottom: 20px;
-    background: rgb(12, 12, 12);
+    background: transparent;
     text-align: left;
     text-decoration: none;
     color: white;
     border-radius: 8px;
     margin-right: 10px;
+    margin-bottom: 15px;
     display: inline-block;
 }
 
 a.music:hover{
-    background: rgb(27, 27, 27);
+    background: rgb(83, 83, 83);
 }
 
 div.row{
-    margin-left: 15px;
+    margin-left: 50px;
+    padding-bottom: 45%;
+
 }
 
 div.title{

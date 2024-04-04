@@ -102,3 +102,27 @@ img.stream{
     margin-right: 20px;
     margin-bottom: 40px;
 }
+
+div.player{
+    background-color: (18, 18, 18);
+    position: fixed;
+    bottom: 0;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.buttons{
+    margin-left: 15px;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    left: 50%;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+}

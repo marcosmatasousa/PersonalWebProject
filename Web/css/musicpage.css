@@ -104,7 +104,7 @@ img.stream{
 }
 
 div.player{
-    background-color: (18, 18, 18);
+    background-color: rgb(18, 18, 18);
     position: fixed;
     bottom: 0;
     height: 75px;

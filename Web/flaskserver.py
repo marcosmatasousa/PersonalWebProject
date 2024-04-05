@@ -12,33 +12,9 @@ def return_index():
 def serve_css(filename):
     return send_from_directory('css', filename)
 
-@app.route('/html/path:filename')
+@app.route('/<path:filename>')
 def serve_html(filename):
-    return send_from_directory('html', filename)
-
-@app.route('/music')
-def return_music_page():
-    return send_file('music.html', mimetype='html')
-
-@app.route('/champion')
-def return_champion_page():
-    return send_file('champion.html', mimetype='html')
-
-@app.route('/thishouseisnotahome')
-def return_thishouse_page():
-    return send_file('thishouseisnotahome.html', mimetype='html')
-
-@app.route('/safeindoors')
-def return_safeindoors_page():
-    return send_file('safeindoors.html', mimetype='html')
-
-@app.route('/todo')
-def return_todo_page():
-    return send_file('todo.html', mimetype='html')
-
-@app.route('/about')
-def return_about_page():
-    return send_file('about.html', mimetype='html')
+    return send_from_directory('.', filename)
 
 @app.route('/static')
 def serve_static(path):

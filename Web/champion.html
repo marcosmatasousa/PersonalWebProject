@@ -23,18 +23,20 @@
     </header>
     <hr>
     <div class="music_list">
-        <ol id="playlist">
-            <li data-src="static/HomeForTheHolidays.mp3">HomeForTheHolidays</li>
-            <li data-src="static/WishICouldHaveHelpedYou.mp3">WishICouldHaveHelpedYou</li>
-            <li data-src="static/NumberOneFan.mp3">NumberOneFan</li>
-            <li data-src="static/IBelieveYou,ButMyGlock19Don't.mp3">IBelieveYou,ButMyGlock19Don't</li>
-            <li data-src="static/Trampoline.mp3">Trampoline</li>
-            <li data-src="static/DefendingYourLife.mp3">DefendingYourLife</li>
-            <li data-src="static/10ThingsIHateAboutYou.mp3">10ThingsIHateAboutYou</li>
-            <li data-src="static/Brighton.mp3">Brighton</li>
-        </ol>
+        <ul id="playlist">
+            <li onclick="clickOnTitle('HomeForTheHolidays')">HomeForTheHolidays</li>
+            <li onclick="clickOnTitle('WishICouldHaveHelpedYou')">WishICouldHaveHelpedYou</li>
+            <li onclick="clickOnTitle('NumberOneFan')">NumberOneFan</li>
+            <li onclick="clickOnTitle('IBelieveYou,ButMyGlock19Dont')">IBelieveYou,ButMyGlock19Dont</li>
+            <li onclick="clickOnTitle('Trampoline')">Trampoline</li>
+            <li onclick="clickOnTitle('DefendingYourLife')">DefendingYourLife</li>
+            <li onclick="clickOnTitle('10ThingsIHateAboutYou')">10ThingsIHateAboutYou</li>
+            <li onclick="clickOnTitle('Brighton')">Brighton</li>
+        </ul>
     </div>
     <hr>
+
+    <li></li>
 
     <footer style="height: 250px;">
         <div class="footer">More of BONES
@@ -47,9 +49,9 @@
 
     <div class="player">
         <div class="buttons">
-            <button><img style="padding-bottom: 8px;" src="static/backward.png" alt=""></button>
+            <button onclick="backward()"><img style="padding-bottom: 8px;" src="static/backward.png" alt=""></button>
             <button><img src="static/white_play.png" alt=""></button>
-            <button><img style="padding-bottom: 8px;" src="static/forward.png" alt=""></button>
+            <button onclick="forward()"><img style="padding-bottom: 8px;" src="static/forward.png" alt=""></button>
         </div>
     </div>
 
@@ -58,20 +60,8 @@
         Seu navegador não suporta a reprodução de áudio.
     </audio>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var playlist = document.getElementById('playlist');
-            var audioPlayer = document.getElementById('audioPlayer');
-
-            playlist.addEventListener('click', function(e) {
-                var target = e.target;
-                if (target.tagName === 'LI') {
-                    var musicSrc = target.getAttribute('data-src');
-                    audioPlayer.src = musicSrc;
-                    audioPlayer.play();
-                }
-            });
-        });
+    <script src="js/script.js">
+        
     </script>
 </body>
 </html>

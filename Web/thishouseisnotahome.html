@@ -23,16 +23,16 @@
     </header>
     <hr>
     <div class="music_list">
-        <ul>
-            <li data-src="static/">theballadofnormalpaul</li>
-            <li data-src="static/">behindenemylines</li>
-            <li data-src="">whatsgoodforthegooseisgoodforthegander</li>
-            <li data-src="static/">'tistheseason</li>
-            <li data-src="static/">thishurtsmemorethanithurtsyou</li>
-            <li data-src="static/">​lightasafeather,stiffasaboard (feat. BONES)</li>
-            <li data-src="static/">amillionwaystodie</li>
-            <li data-src="static/">getwellsoon</li>
-            <li data-src="static/">whilesupplieslast</li>
+        <ul id="playlist">>
+            <li onclick="clickOnTitle('theballadofnormanpaul')">theballadofnormanpaul</li>
+            <li onclick="clickOnTitle('behindenemylines')">behindenemylines</li>
+            <li onclick="clickOnTitle('whatsgoodforthegooseisgoodforthegander')">whatsgoodforthegooseisgoodforthegander</li>
+            <li onclick="clickOnTitle('tistheseason')">tistheseason</li>
+            <li onclick="clickOnTitle('thishurtsmemorethanithurtsyou')">thishurtsmemorethanithurtsyou</li>
+            <li onclick="clickOnTitle('​lightasafeather,stiffasaboard (feat. BONES)')">​lightasafeather,stiffasaboard (feat. BONES)</li>
+            <li onclick="clickOnTitle('amillionwaystodie')">amillionwaystodie</li>
+            <li onclick="clickOnTitle('getwellsoon')">getwellsoon</li>
+            <li onclick="clickOnTitle('whilesupplieslast')">whilesupplieslast</li>
         </ul>
     </div>
     <hr>
@@ -48,11 +48,18 @@
 
     <div class="player">
         <div class="buttons">
-            <button><img style="padding-bottom: 8px;" src="static/backward.png" alt=""></button>
+            <button onclick="backward()"><img style="padding-bottom: 8px;" src="static/backward.png" alt=""></button>
             <button><img src="static/white_play.png" alt=""></button>
-            <button><img style="padding-bottom: 8px;" src="static/forward.png" alt=""></button>
+            <button onclick="forward()"><img style="padding-bottom: 8px;" src="static/forward.png" alt=""></button>
         </div>
     </div>
+
+    <audio id="audioPlayer" controls>
+        <source src="" type="audio/mpeg">
+        Seu navegador não suporta a reprodução de áudio.
+    </audio>
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>

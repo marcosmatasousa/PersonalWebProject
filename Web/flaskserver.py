@@ -12,6 +12,10 @@ def return_index():
 def serve_css(filename):
     return send_from_directory('css', filename)
 
+@app.route('/js/<path:filename>')
+def serve_js(filename):
+    return send_from_directory('js', filename)
+
 @app.route('/<path:filename>')
 def serve_html(filename):
     return send_from_directory('.', filename)

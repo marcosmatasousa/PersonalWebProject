@@ -1,22 +1,41 @@
 var audioPlayer = document.getElementById('audioPlayer');
-
 var playPause = document.getElementById('play-pause');
-playPause.src = "/static/play.png"
+playPause.src = "/static/play.png";
 
-// Waiting for the end of a song
+playlist = document.getElementById('playlist');
+currentSong = playlist.children[0].innerHTML;
+
+// Events that updates the play/pause button display
 audioPlayer.addEventListener('ended', forward);
 
 audioPlayer.addEventListener('start', function(){
-    playPause.src = '/static/pause.png'
+    playPause.src = '/static/pause.png';
 })
 
 audioPlayer.addEventListener('ended', function(){
-    playPause.src = '/static/play.png'
+    playPause.src = '/static/play.png';
 })
 
 audioPlayer.addEventListener('pause', function(){
-    playPause.src = '/static/play.png'
+    playPause.src = '/static/play.png';
+    console.log(`Song paused`);
 })
+
+audioPlayer.addEventListener('play', function(){
+    playPause.src = '/static/pause.png';
+})
+
+function playPauseButton(){
+    if (!audioPlayer.paused){
+        audioPlayer.pause();
+    }
+    else if (audioPlayer.currentTime === 0){
+        playSong(`/static/${currentSong}.mp3`);
+    }
+    else{
+        resume()
+    }
+}
 
 function updateSong(song){
     currentSong = song;
@@ -73,6 +92,14 @@ function clickOnTitle(item){
 function playSong(src){
     audioPlayer.src = src;
     audioPlayer.play(src);
-    playPause.src = "static/pause.png"
     console.log("Now playing: " + src);
 }
+
+function resume(){
+    audioPlayer.play();
+    console.log('Song resumed');
+}
+
+// TODO: 
+// ARRUMAR O FORWARD QUANDO ESTÁ NA PRIMEIRA E ULTIMA TRACK
+// ARRUMAR O CURRENT SONG QUANDO A PLAYLIST CHEGAR AO FIM

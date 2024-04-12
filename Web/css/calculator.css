@@ -7,7 +7,7 @@ body{
 
 button{
     color:white;
-    border: none;
+    border:2cm;
     cursor: pointer;
 }
 
@@ -31,6 +31,7 @@ div.display{
     margin-left: 40px;
     margin-top: 30px;
     margin-bottom: 10px;
+    color: black;
 }
 
 div.buttons_horizontal{

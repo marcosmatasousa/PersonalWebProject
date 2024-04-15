@@ -1,7 +1,7 @@
 display = document.getElementById("display");
 
 function calculate(){
-    const result = eval(display.innerHTML);
+    result = eval(display.innerHTML);
     display.innerHTML = result;
 }
 

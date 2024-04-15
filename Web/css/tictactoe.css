@@ -1,0 +1,10 @@
+button{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+table{
+    margin-top: 20px;
+    text-align: center;
+}

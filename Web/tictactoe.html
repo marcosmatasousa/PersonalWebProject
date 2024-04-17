@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/tictactoe.css">
+  <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
   <title>Tic-Tac-Toe</title>
 </head>
 
 
 <body>
   <h1>Tic-Tac-Toe</h1>
-  <h2 id="turn"></h2>
 
-  <div>
-    <table class="game" border="1">
+  <div class="game">
+    <table border="" class="game">
       <tr class="row">
         <td><button id="[0, 0]" onclick="makePlay(0, 0)"></button></td>
         <td><button id="[0, 1]" onclick="makePlay(0, 1)"></button></td>
@@ -31,19 +31,17 @@
       </tr>
     </table>
   </div>
+  
 
-
-  <div>
-    <table border="1" width="10%">
-      <tr>
-        <th>X</th>
-        <th>O</th>
-      </tr>
-      <tr>
-        <td id="X.score"></td>
-        <td id="O.score"></td>
-      </tr>
-    </table>
+  <div class="scores">
+    <div id="X_score" class="score">
+      <img class="score_symbol" src="static/X_score.png" alt="">
+      <p id="X_score_number" class="X_score" style="float: right;"></p>
+    </div>
+    <div id="O_score" class="score">
+      <img class="score_symbol" src="static/O_score.png" alt="">
+      <p id="O_score_number" class="O_score" style="float: right;"></p>
+    </div>
   </div>
   
   

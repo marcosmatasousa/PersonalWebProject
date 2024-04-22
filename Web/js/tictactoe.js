@@ -9,19 +9,16 @@ document.getElementById("X_score").style.borderBottom = "2px solid rgb(29,185,84
 
 // Function responsible for updating the game
 function makePlay(x, y){
+    var validPlay = false;
     if(table[x][y] === 0){
         table[x][y] = turn;
         var img = document.createElement("img"); 
         img.src = `static/${turn}_play.png`;
         document.getElementById(`[${x}, ${y}]`).appendChild(img);
-        
+        validPlay = true;
     }
-    if(!checkStatus()){
-        changeTurn();
-    }
-    else{
-        updateScore()
-        clearBoard()
+    if(validPlay){
+        checkStatus();
     }
 }
 
@@ -34,8 +31,7 @@ function updateScore(){
 // Clears the board of the game
 function clearBoard(){
     table = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
-    changeTurn();
-
+    
     for (var i = 0; i < table.length; i++) {
         for (var j = 0; j < table[i].length; j++) {
             document.getElementById(`[${i}, ${j}]`).innerHTML = "";
@@ -43,7 +39,7 @@ function clearBoard(){
     }
 }
 
-function checkStatus(){
+function checkWin(){
     // Checking every row
     for(let i = 0; i < table.length; i++){
         var row = table[i];
@@ -68,6 +64,19 @@ function checkStatus(){
     }
     return false;
 }
+
+// Checks whether some player has won or the game ended with draw
+function checkStatus(){
+    if(checkWin()){
+        updateScore();
+        clearBoard();
+    }
+    else if(checkDraw()){
+        clearBoard();
+    }
+    changeTurn();
+}
+    
 
 function checkDraw(){
     for(let i = 0; i < table.length; i++){
@@ -97,7 +106,3 @@ function allEqual(row){
         return element === row[0] && row[0] !== 0;
     })
 }
-
-//TODO:
-// FAZER UMA FUNÇÃO UNICA QUE VERIFICA O RESULTADO DO JOGO
-// ADICIONAR RESULTADO DE EMPATE AO JOGO

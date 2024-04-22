@@ -17,16 +17,7 @@ function makePlay(x, y){
         
     }
     if(!checkStatus()){
-        if(turn === 'X'){
-            turn = 'O';
-            document.getElementById("O_score").style.borderBottom = "2px solid rgb(29,185,84)";
-            document.getElementById("X_score").style.borderBottom = "1px solid rgb(85, 84, 84)";
-        }
-        else{
-            turn = 'X';
-            document.getElementById("X_score").style.borderBottom = "2px solid rgb(29,185,84)";
-            document.getElementById("O_score").style.borderBottom = "1px solid rgb(85, 84, 84)";
-        }
+        changeTurn();
     }
     else{
         updateScore()
@@ -43,16 +34,7 @@ function updateScore(){
 // Clears the board of the game
 function clearBoard(){
     table = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
-    if(turn === 'X'){
-        turn = 'O';
-        document.getElementById("O_score").style.borderBottom = "2px solid rgb(29,185,84)";
-        document.getElementById("X_score").style.borderBottom = "1px solid rgb(85, 84, 84)";
-    }
-    else{
-        turn = 'X';
-        document.getElementById("X_score").style.borderBottom = "2px solid rgb(29,185,84)";
-        document.getElementById("O_score").style.borderBottom = "1px solid rgb(85, 84, 84)";
-    }
+    changeTurn();
 
     for (var i = 0; i < table.length; i++) {
         for (var j = 0; j < table[i].length; j++) {
@@ -87,9 +69,35 @@ function checkStatus(){
     return false;
 }
 
+function checkDraw(){
+    for(let i = 0; i < table.length; i++){
+        if(table[i].includes(0)){
+            return false;
+        }
+    }
+    return true
+}
+
+function changeTurn(){
+    if(turn === 'X'){
+        turn = 'O';
+        document.getElementById("O_score").style.borderBottom = "2px solid rgb(29,185,84)";
+        document.getElementById("X_score").style.borderBottom = "1px solid rgb(85, 84, 84)";
+    }
+    else{
+        turn = 'X';
+        document.getElementById("X_score").style.borderBottom = "2px solid rgb(29,185,84)";
+        document.getElementById("O_score").style.borderBottom = "1px solid rgb(85, 84, 84)";
+    }
+}
+
 // Verifies if every item on a row are the same
 function allEqual(row){
     return row.every(function(element) {
         return element === row[0] && row[0] !== 0;
     })
 }
+
+//TODO:
+// FAZER UMA FUNÇÃO UNICA QUE VERIFICA O RESULTADO DO JOGO
+// ADICIONAR RESULTADO DE EMPATE AO JOGO
